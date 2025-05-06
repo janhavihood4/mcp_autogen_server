@@ -1,0 +1,21 @@
+2025-04-29 14:01:33,990 - INFO - Starting Autogen MCP client main()
+2025-04-29 14:01:33,990 - DEBUG - Loading environment variables from .env file
+2025-04-29 14:01:33,992 - DEBUG - Initializing server parameters for Trello MCP server
+2025-04-29 14:01:33,992 - INFO - Server parameters initialized
+2025-04-29 14:01:33,992 - DEBUG - Retrieving available tools from the MCP server
+2025-04-29 14:01:36,195 - INFO - Retrieved 0 tools from MCP server
+2025-04-29 14:01:36,195 - INFO - Available tools: 
+2025-04-29 14:01:36,195 - DEBUG - Creating OpenAIChatCompletionClient (named anthropic_client here)
+2025-04-29 14:01:36,346 - INFO - OpenAIChatCompletion client initialized
+2025-04-29 14:01:36,346 - INFO - AnthropicChatCompletion client initialized
+2025-04-29 14:01:36,346 - DEBUG - Initializing UserProxyAgent and AssistantAgent
+2025-04-29 14:01:36,349 - INFO - AssistantAgent and UserProxyAgent created
+2025-04-29 14:01:36,351 - DEBUG - Setting up termination conditions
+2025-04-29 14:01:36,351 - DEBUG - Configuring RoundRobinGroupChat
+2025-04-29 14:01:36,351 - INFO - RoundRobinGroupChat configured
+2025-04-29 14:01:36,351 - INFO - Client Request: get me github for mansi
+2025-04-29 14:01:36,354 - DEBUG - Starting manual event loop for team.run_stream()
+2025-04-29 14:01:36,382 - INFO - MESSAGE FROM USER: get me github for mansi
+2025-04-29 14:01:38,045 - INFO - MESSAGE FROM TRELLO_API_AGENT: I am sorry, I cannot fulfill this request. The available tools lack the desired functionality.\nTERMINATE\n
+2025-04-29 14:01:38,051 - INFO - MESSAGE FROM USER: get me github for mansi
+2025-04-29 14:01:38,053 - INFO - Event loop completed successfully

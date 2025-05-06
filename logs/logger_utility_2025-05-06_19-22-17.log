@@ -1,0 +1,9 @@
+2025-05-06 19:22:18,572 - INFO - Starting Autogen MCP client main()
+2025-05-06 19:22:18,573 - DEBUG - Environment variables loaded
+2025-05-06 19:22:18,573 - DEBUG - Server params: type='SseServerParams' url='http://127.0.0.1:8000/sse' headers={'Content-Type': 'application/json'} timeout=30.0 sse_read_timeout=300
+2025-05-06 19:22:18,628 - INFO - Retrieved 2 tools from MCP server
+2025-05-06 19:22:18,636 - INFO - Anthropic client initialized
+2025-05-06 19:22:18,636 - INFO - AssistantAgent and UserProxyAgent created
+2025-05-06 19:22:18,636 - INFO - RoundRobinGroupChat configured
+2025-05-06 19:22:18,636 - INFO - Starting console run with task: Whats the weather of Texas?
+2025-05-06 19:22:54,244 - INFO - Console run completed successfully

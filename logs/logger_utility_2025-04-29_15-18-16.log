@@ -1,0 +1,36 @@
+2025-04-29 15:18:16,970 - INFO - Starting Autogen MCP client main()
+2025-04-29 15:18:16,970 - DEBUG - Loading environment variables from .env file
+2025-04-29 15:18:16,970 - DEBUG - Initializing server parameters for Trello MCP server
+2025-04-29 15:18:16,970 - INFO - Server parameters initialized
+2025-04-29 15:18:16,971 - DEBUG - Retrieving available tools from the MCP server
+2025-04-29 15:18:18,358 - INFO - Retrieved 2 tools from MCP server
+2025-04-29 15:18:18,359 - INFO - Available tools: get_alerts, get_forecast
+2025-04-29 15:18:18,359 - DEBUG - Creating OpenAIChatCompletionClient (named anthropic_client here)
+2025-04-29 15:18:18,506 - INFO - OpenAIChatCompletion client initialized
+2025-04-29 15:18:18,507 - INFO - AnthropicChatCompletion client initialized
+2025-04-29 15:18:18,507 - DEBUG - Initializing UserProxyAgent and AssistantAgent
+2025-04-29 15:18:18,508 - INFO - AssistantAgent and UserProxyAgent created
+2025-04-29 15:18:18,508 - DEBUG - Setting up termination conditions
+2025-04-29 15:18:18,508 - DEBUG - Configuring RoundRobinGroupChat
+2025-04-29 15:18:18,508 - INFO - RoundRobinGroupChat configured
+2025-04-29 15:18:18,509 - INFO - Client Request: get me wheather for cape town
+2025-04-29 15:18:18,509 - DEBUG - Starting manual event loop for team.run_stream()
+2025-04-29 15:18:18,533 - INFO - MESSAGE FROM USER: get me wheather for cape town
+2025-04-29 15:18:21,127 - INFO - MESSAGE FROM TRELLO_API_AGENT: Cape Town is not in the US. Please provide a US state.\n
+2025-04-29 15:18:21,131 - INFO - source='user' models_usage=None metadata={} request_id='d9fe438a-8e51-4e8b-b4c5-1abe418994b8' content='' type='UserInputRequestedEvent'
+2025-04-29 15:18:29,594 - INFO - MESSAGE FROM USER: yes
+2025-04-29 15:18:30,898 - INFO - MESSAGE FROM TRELLO_API_AGENT: Please provide a US state.\n
+2025-04-29 15:18:30,902 - INFO - source='user' models_usage=None metadata={} request_id='b45caade-ba2f-4b42-b0aa-784dbcc3d64c' content='' type='UserInputRequestedEvent'
+2025-04-29 15:19:06,194 - INFO - MESSAGE FROM USER: california
+2025-04-29 15:19:07,572 - INFO - FUNCTION CALLED BY Trello_api_agent: get_alerts({
+  "state": "CA"
+})
+2025-04-29 15:19:10,871 - INFO - FUNCTION RESULT FOR get_alerts: 
+  Item 1: \\n\\nEvent: Beach Hazards Statement\\n\\nArea: Orange County Coastal\\n\\nSeverity: Moderate\\n\\nDescription: * WHAT...Elevated surf of 4 to 6 ft, with sets to 7 ft expected.\\n\\n* WHERE...Orange County Beaches.\\n\\n* WHEN...Through Wednesday evening.\\n\\n* IMPACTS...Strong rip currents will create hazardous swimming\\nconditions.\\n\\n* ADDITIONAL DETAILS...A 2 to 3 ft swell from 190 to 200 degrees\\nwith a 16 to 18 second period will prevail. Highest surf will\\noccur on south/southwest facing beaches.\\n\\nInstructions: Remain out of the water to avoid hazardous swimming conditions.\\n\\n\\n---\\n\\n\\nEvent: Wind Advisory\\n\\nArea: Santa Barbara County Southwestern Coast; Santa Ynez Mountains Western Range\\n\\nSeverity: Moderate\\n\\nDescription: * WHAT...Northwest to north winds 20 to 30 mph with gusts up to 50\\nmph expected.\\n\\n* WHERE...Santa Barbara County Southwestern Coast and Santa Ynez\\nMountains Western Range.\\n\\n* WHEN...Until 3 AM PDT Tuesday.\\n\\n* IMPACTS...Gusty winds will blow around unsecured objects. Tree\\nlimbs could be blown down and a few power outages may result.\\n\\nInstructions: Winds this strong can make driving difficult, especially for high\\nprofile vehicles. Use extra caution.\\n\\n\\n---\\n\\n\\nEvent: Beach Hazards Statement\\n\\nArea: Malibu Coast; Los Angeles County Beaches\\n\\nSeverity: Moderate\\n\\nDescription: * WHAT...Breaking waves up to 6 feet for south facing beaches\\nand dangerous rip currents due to a long lived, long period\\nsouth swell.\\n\\n* WHERE...Malibu Coast and Los Angeles County Beaches.\\n\\n* WHEN...Through Wednesday evening.\\n\\n* IMPACTS...There is an increased risk of ocean drowning. Rip\\ncurrents can pull swimmers and surfers out to sea. Waves can\\nwash people off beaches and rocks, and capsize small boats\\nnearshore.\\n\\nInstructions: Remain out of the water due to hazardous swimming conditions, or\\nstay near occupied lifeguard towers. Rock jetties can be deadly\\nin such conditions, stay off the rocks.\\n\\n
+
+2025-04-29 15:19:10,875 - INFO - source='Trello_api_agent' models_usage=None metadata={} content="[TextContent(type='text', text='\\n\\nEvent: Beach Hazards Statement\\n\\nArea: Orange County Coastal\\n\\nSeverity: Moderate\\n\\nDescription: * WHAT...Elevated surf of 4 to 6 ft, with sets to 7 ft expected.\\n\\n* WHERE...Orange County Beaches.\\n\\n* WHEN...Through Wednesday evening.\\n\\n* IMPACTS...Strong rip currents will create hazardous swimming\\nconditions.\\n\\n* ADDITIONAL DETAILS...A 2 to 3 ft swell from 190 to 200 degrees\\nwith a 16 to 18 second period will prevail. Highest surf will\\noccur on south/southwest facing beaches.\\n\\nInstructions: Remain out of the water to avoid hazardous swimming conditions.\\n\\n\\n---\\n\\n\\nEvent: Wind Advisory\\n\\nArea: Santa Barbara County Southwestern Coast; Santa Ynez Mountains Western Range\\n\\nSeverity: Moderate\\n\\nDescription: * WHAT...Northwest to north winds 20 to 30 mph with gusts up to 50\\nmph expected.\\n\\n* WHERE...Santa Barbara County Southwestern Coast and Santa Ynez\\nMountains Western Range.\\n\\n* WHEN...Until 3 AM PDT Tuesday.\\n\\n* IMPACTS...Gusty winds will blow around unsecured objects. Tree\\nlimbs could be blown down and a few power outages may result.\\n\\nInstructions: Winds this strong can make driving difficult, especially for high\\nprofile vehicles. Use extra caution.\\n\\n\\n---\\n\\n\\nEvent: Beach Hazards Statement\\n\\nArea: Malibu Coast; Los Angeles County Beaches\\n\\nSeverity: Moderate\\n\\nDescription: * WHAT...Breaking waves up to 6 feet for south facing beaches\\nand dangerous rip currents due to a long lived, long period\\nsouth swell.\\n\\n* WHERE...Malibu Coast and Los Angeles County Beaches.\\n\\n* WHEN...Through Wednesday evening.\\n\\n* IMPACTS...There is an increased risk of ocean drowning. Rip\\ncurrents can pull swimmers and surfers out to sea. Waves can\\nwash people off beaches and rocks, and capsize small boats\\nnearshore.\\n\\nInstructions: Remain out of the water due to hazardous swimming conditions, or\\nstay near occupied lifeguard towers. Rock jetties can be deadly\\nin such conditions, stay off the rocks.\\n\\n', annotations=None)]" type='ToolCallSummaryMessage'
+2025-04-29 15:19:10,880 - INFO - source='user' models_usage=None metadata={} request_id='c98882bf-108f-4026-a750-31bb002a738d' content='' type='UserInputRequestedEvent'
+2025-04-29 15:19:24,456 - INFO - MESSAGE FROM USER: yes
+2025-04-29 15:19:25,439 - INFO - MESSAGE FROM TRELLO_API_AGENT: TERMINATE\n
+2025-04-29 15:19:25,444 - INFO - MESSAGE FROM USER: get me wheather for cape town
+2025-04-29 15:19:25,447 - INFO - Event loop completed successfully

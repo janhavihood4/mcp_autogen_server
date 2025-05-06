@@ -1,0 +1,21 @@
+2025-04-29 15:09:02,911 - INFO - Starting Autogen MCP client main()
+2025-04-29 15:09:02,912 - DEBUG - Loading environment variables from .env file
+2025-04-29 15:09:02,912 - DEBUG - Initializing server parameters for Trello MCP server
+2025-04-29 15:09:02,913 - INFO - Server parameters initialized
+2025-04-29 15:09:02,913 - DEBUG - Retrieving available tools from the MCP server
+2025-04-29 15:09:05,053 - INFO - Retrieved 0 tools from MCP server
+2025-04-29 15:09:05,053 - INFO - Available tools: 
+2025-04-29 15:09:05,054 - DEBUG - Creating OpenAIChatCompletionClient (named anthropic_client here)
+2025-04-29 15:09:05,225 - INFO - OpenAIChatCompletion client initialized
+2025-04-29 15:09:05,226 - INFO - AnthropicChatCompletion client initialized
+2025-04-29 15:09:05,226 - DEBUG - Initializing UserProxyAgent and AssistantAgent
+2025-04-29 15:09:05,227 - INFO - AssistantAgent and UserProxyAgent created
+2025-04-29 15:09:05,227 - DEBUG - Setting up termination conditions
+2025-04-29 15:09:05,227 - DEBUG - Configuring RoundRobinGroupChat
+2025-04-29 15:09:05,227 - INFO - RoundRobinGroupChat configured
+2025-04-29 15:09:05,227 - INFO - Client Request: get me wheather for cape town
+2025-04-29 15:09:05,229 - DEBUG - Starting manual event loop for team.run_stream()
+2025-04-29 15:09:05,240 - INFO - MESSAGE FROM USER: get me wheather for cape town
+2025-04-29 15:09:06,705 - INFO - MESSAGE FROM TRELLO_API_AGENT: I cannot fulfill this request. I do not have the functionality to get weather information.\nTERMINATE\n
+2025-04-29 15:09:06,707 - INFO - MESSAGE FROM USER: get me wheather for cape town
+2025-04-29 15:09:06,710 - INFO - Event loop completed successfully

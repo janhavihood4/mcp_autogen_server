@@ -1,0 +1,122 @@
+2025-05-06 18:49:19,983 - INFO - Starting Autogen MCP client main()
+2025-05-06 18:49:19,984 - DEBUG - Environment variables loaded
+2025-05-06 18:49:19,984 - DEBUG - Server params: type='SseServerParams' url='http://127.0.0.1:8000/sse' headers={'Content-Type': 'application/json'} timeout=30.0 sse_read_timeout=300
+2025-05-06 18:49:20,058 - INFO - Retrieved 2 tools from MCP server
+2025-05-06 18:49:20,066 - INFO - Anthropic client initialized
+2025-05-06 18:49:20,067 - INFO - AssistantAgent and UserProxyAgent created
+2025-05-06 18:49:20,067 - INFO - RoundRobinGroupChat configured
+2025-05-06 18:49:20,068 - INFO - Starting console run with task: Whats the weather of Texas?
+2025-05-06 19:17:21,444 - ERROR - Error during console run: APITimeoutError: Request timed out.
+Traceback:
+Traceback (most recent call last):
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpcore\_async\connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpcore\_backends\anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\openai\_base_client.py", line 1484, in request
+    response = await self._client.send(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+
+httpx.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\autogen_agentchat\teams\_group_chat\_chat_agent_container.py", line 79, in handle_request
+    async for msg in self._agent.on_messages_stream(self._message_buffer, ctx.cancellation_token):
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\autogen_agentchat\agents\_assistant_agent.py", line 827, in on_messages_stream
+    async for inference_output in self._call_llm(
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\autogen_agentchat\agents\_assistant_agent.py", line 955, in _call_llm
+    model_result = await model_client.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\autogen_ext\models\openai\_openai_client.py", line 624, in create
+    result: Union[ParsedChatCompletion[BaseModel], ChatCompletion] = await future
+                                                                     ^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2028, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\openai\_base_client.py", line 1742, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "C:\Users\Janha\Downloads\MCP\MCP\venv\Lib\site-packages\openai\_base_client.py", line 1502, in request
+    raise APITimeoutError(request=request) from err
+
+openai.APITimeoutError: Request timed out.
+

@@ -1,0 +1,26 @@
+2025-04-29 17:45:52,337 - INFO - Starting Autogen MCP client main()
+2025-04-29 17:45:52,338 - DEBUG - Loading environment variables from .env file
+2025-04-29 17:45:52,338 - DEBUG - Initializing server parameters for Trello MCP server
+2025-04-29 17:45:52,338 - INFO - Server parameters initialized
+2025-04-29 17:45:52,338 - DEBUG - Retrieving available tools from the MCP server
+2025-04-29 17:45:54,208 - INFO - Retrieved 2 tools from MCP server
+2025-04-29 17:45:54,210 - INFO - Available tools: get_alerts, get_forecast
+2025-04-29 17:45:54,211 - DEBUG - Creating OpenAIChatCompletionClient (named anthropic_client here)
+2025-04-29 17:45:54,304 - INFO - OpenAIChatCompletion client initialized
+2025-04-29 17:45:54,305 - INFO - AnthropicChatCompletion client initialized
+2025-04-29 17:45:54,306 - DEBUG - Initializing UserProxyAgent and AssistantAgent
+2025-04-29 17:45:54,307 - INFO - AssistantAgent and UserProxyAgent created
+2025-04-29 17:45:54,307 - DEBUG - Setting up termination conditions
+2025-04-29 17:45:54,307 - DEBUG - Configuring RoundRobinGroupChat
+2025-04-29 17:45:54,307 - INFO - RoundRobinGroupChat configured
+2025-04-29 17:45:54,308 - INFO - Client Request: get me wheather for cape town
+2025-04-29 17:45:54,308 - DEBUG - Starting manual event loop for team.run_stream()
+2025-04-29 17:45:54,321 - INFO - MESSAGE FROM USER: get me wheather for cape town
+2025-04-29 17:45:57,172 - INFO - MESSAGE FROM TRELLO_API_AGENT: Cape Town is not in the US. Please provide a US state.\n
+2025-04-29 17:45:57,175 - INFO - source='user' models_usage=None metadata={} request_id='23d2d9e6-5585-4b82-89d6-c98ed6989ea1' content='' type='UserInputRequestedEvent'
+2025-04-29 17:46:41,165 - INFO - MESSAGE FROM USER: yes
+2025-04-29 17:46:42,501 - INFO - MESSAGE FROM TRELLO_API_AGENT: Please provide a US state.\n
+2025-04-29 17:46:42,506 - INFO - source='user' models_usage=None metadata={} request_id='5dc3a508-4fde-4d2f-ac18-9bf25e4eff54' content='' type='UserInputRequestedEvent'
+2025-04-29 17:46:51,053 - INFO - MESSAGE FROM USER: yes
+2025-04-29 17:46:52,094 - INFO - MESSAGE FROM TRELLO_API_AGENT: Please provide a US state.\n
+2025-04-29 17:46:52,096 - INFO - source='user' models_usage=None metadata={} request_id='4c144e7d-d560-4d2e-baf6-a85e7bb71648' content='' type='UserInputRequestedEvent'

@@ -1,0 +1,6 @@
+2025-04-29 13:37:19,486 - INFO - Starting Autogen MCP client main()
+2025-04-29 13:37:19,486 - DEBUG - Loading environment variables from .env file
+2025-04-29 13:37:19,486 - DEBUG - Initializing server parameters for Trello MCP server
+2025-04-29 13:37:19,487 - INFO - Server parameters initialized
+2025-04-29 13:37:19,487 - DEBUG - Retrieving available tools from the MCP server
+2025-04-29 13:37:24,532 - ERROR - Failed to retrieve MCP tools: unhandled errors in a TaskGroup (1 sub-exception)

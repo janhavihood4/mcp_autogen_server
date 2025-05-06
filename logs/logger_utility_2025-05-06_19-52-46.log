@@ -1,0 +1,4 @@
+2025-05-06 19:52:48,510 - INFO - Starting Autogen MCP client main()
+2025-05-06 19:52:48,510 - DEBUG - Environment variables loaded
+2025-05-06 19:52:48,510 - DEBUG - Server params: type='SseServerParams' url='http://127.0.0.1:8000/sse' headers={'Content-Type': 'application/json'} timeout=30.0 sse_read_timeout=300
+2025-05-06 19:52:50,575 - ERROR - Failed to retrieve MCP tools: unhandled errors in a TaskGroup (1 sub-exception)

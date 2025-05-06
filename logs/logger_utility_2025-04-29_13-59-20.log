@@ -1,0 +1,133 @@
+2025-04-29 13:59:20,324 - INFO - Starting Autogen MCP client main()
+2025-04-29 13:59:20,324 - DEBUG - Loading environment variables from .env file
+2025-04-29 13:59:20,324 - DEBUG - Initializing server parameters for Trello MCP server
+2025-04-29 13:59:20,329 - INFO - Server parameters initialized
+2025-04-29 13:59:20,329 - DEBUG - Retrieving available tools from the MCP server
+2025-04-29 13:59:22,677 - INFO - Retrieved 0 tools from MCP server
+2025-04-29 13:59:22,677 - INFO - Available tools: 
+2025-04-29 13:59:22,677 - DEBUG - Creating OpenAIChatCompletionClient (named anthropic_client here)
+2025-04-29 13:59:22,948 - INFO - OpenAIChatCompletion client initialized
+2025-04-29 13:59:22,948 - INFO - AnthropicChatCompletion client initialized
+2025-04-29 13:59:22,948 - DEBUG - Initializing UserProxyAgent and AssistantAgent
+2025-04-29 13:59:22,953 - INFO - AssistantAgent and UserProxyAgent created
+2025-04-29 13:59:22,953 - DEBUG - Setting up termination conditions
+2025-04-29 13:59:22,953 - DEBUG - Configuring RoundRobinGroupChat
+2025-04-29 13:59:22,953 - INFO - RoundRobinGroupChat configured
+2025-04-29 13:59:22,953 - INFO - Client Request: get me github for mansi
+2025-04-29 13:59:22,959 - DEBUG - Starting manual event loop for team.run_stream()
+2025-04-29 13:59:23,004 - INFO - MESSAGE FROM USER: get me github for mansi
+2025-04-29 13:59:39,845 - ERROR - Error during event loop: APITimeoutError: Request timed out.
+Traceback:
+Traceback (most recent call last):
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpcore\_async\connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpcore\_backends\anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+
+  File "C:\Program Files\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\openai\_base_client.py", line 1576, in _request
+    response = await self._client.send(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+
+  File "C:\Program Files\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+
+httpx.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\autogen_agentchat\teams\_group_chat\_chat_agent_container.py", line 79, in handle_request
+    async for msg in self._agent.on_messages_stream(self._message_buffer, ctx.cancellation_token):
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\autogen_agentchat\agents\_assistant_agent.py", line 793, in on_messages_stream
+    async for inference_output in self._call_llm(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\autogen_agentchat\agents\_assistant_agent.py", line 920, in _call_llm
+    model_result = await model_client.create(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\autogen_ext\models\openai\_openai_client.py", line 622, in create
+    result: Union[ParsedChatCompletion[BaseModel], ChatCompletion] = await future
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\openai\resources\chat\completions.py", line 1720, in create
+    return await self._post(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\openai\_base_client.py", line 1843, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\openai\_base_client.py", line 1537, in request
+    return await self._request(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\openai\_base_client.py", line 1585, in _request
+    return await self._retry_request(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\openai\_base_client.py", line 1670, in _retry_request
+    return await self._request(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\openai\_base_client.py", line 1585, in _request
+    return await self._retry_request(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\openai\_base_client.py", line 1670, in _retry_request
+    return await self._request(
+
+  File "C:\Users\GOVIND\AppData\Roaming\Python\Python310\site-packages\openai\_base_client.py", line 1595, in _request
+    raise APITimeoutError(request=request) from err
+
+openai.APITimeoutError: Request timed out.
+
